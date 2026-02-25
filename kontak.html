@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>BloomSpace • Kontak</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html">
+      <div class="logo">✿</div>
+      <div>BloomSpace<small>Ruang Belajar & Pengembangan Diri</small></div>
+    </a>
+
+    <nav>
+      <ul id="navLinks">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li><a href="artikel.html" data-page="artikel.html">Artikel</a></li>
+        <li><a href="kelas.html" data-page="kelas.html">Kelas</a></li>
+        <li><a href="tentang.html" data-page="tentang.html">Tentang</a></li>
+        <li><a href="kontak.html" data-page="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <!-- Header Kontak -->
+    <div class="card contact-hero">
+      <div>
+        <span class="pill">📩 Let’s connect</span>
+        <h1 style="margin:10px 0 6px;">Kontak & Media Sosial</h1>
+        <p class="muted" style="margin:0;">
+          Punya pertanyaan, ide kelas baru, atau mau kolaborasi? Hubungi BloomSpace lewat kanal di bawah ya 🌸
+        </p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
+          <a class="btn outline" href="kelas.html">Lihat Kelas</a>
+        </div>
+      </div>
+
+      <!-- mini stats -->
+      <div class="contact-mini">
+        <div class="contact-mini-card">
+          <b>Fast reply</b>
+          <small class="muted">Biasanya dibalas dalam 1–2 hari</small>
+        </div>
+        <div class="contact-mini-card">
+          <b>Jam aktif</b>
+          <small class="muted">16.00–21.00 WIB</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Channels -->
+    <div id="channels" class="grid-3">
+      <!-- Instagram -->
+      <a class="card social-card ig" href="#" onclick="alert('Ganti href ini dengan link Instagram kamu ya!')">
+        <div class="social-top">
+          <div class="social-icon">📷</div>
+          <div class="social-badges">
+            <span class="badge">Instagram</span>
+            <span class="level">DM</span>
+          </div>
+        </div>
+        <h3 style="margin:10px 0 6px;">@bloomspace.id</h3>
+        <p class="muted" style="margin:0 0 12px;">Update tips belajar, reels motivasi, dan info kelas.</p>
+        <div class="social-actions">
+          <span class="pill">Klik untuk buka</span>
+          <button class="btn small outline" type="button"
+            onclick="event.preventDefault(); copyText('@bloomspace.id')">Copy</button>
+        </div>
+      </a>
+
+      <!-- TikTok -->
+      <a class="card social-card tt" href="#" onclick="alert('Ganti href ini dengan link TikTok kamu ya!')">
+        <div class="social-top">
+          <div class="social-icon">🎬</div>
+          <div class="social-badges">
+            <span class="badge">TikTok</span>
+            <span class="level">Video</span>
+          </div>
+        </div>
+        <h3 style="margin:10px 0 6px;">@bloomspace.learn</h3>
+        <p class="muted" style="margin:0 0 12px;">Mini lesson 30–60 detik + challenge percaya diri.</p>
+        <div class="social-actions">
+          <span class="pill">Klik untuk buka</span>
+          <button class="btn small outline" type="button"
+            onclick="event.preventDefault(); copyText('@bloomspace.learn')">Copy</button>
+        </div>
+      </a>
+
+      <!-- Email -->
+      <div class="card social-card mail">
+        <div class="social-top">
+          <div class="social-icon">✉️</div>
+          <div class="social-badges">
+            <span class="badge">Email</span>
+            <span class="level">Formal</span>
+          </div>
+        </div>
+        <h3 style="margin:10px 0 6px;">bloomspace@example.com</h3>
+        <p class="muted" style="margin:0 0 12px;">Untuk kerja sama, sponsorship, atau pertanyaan detail.</p>
+        <div class="social-actions">
+          <a class="btn small" href="mailto:bloomspace@example.com">Kirim Email</a>
+          <button class="btn small outline" type="button" onclick="copyText('bloomspace@example.com')">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Extra banner -->
+    <div style="margin-top:14px;" class="card contact-banner">
+      <div>
+        <span class="pill">💡 Saran kelas</span>
+        <h3 style="margin:10px 0 6px;">Bantu BloomSpace berkembang!</h3>
+        <p class="muted" style="margin:0;">
+          Kamu pengen kelas apa selanjutnya? Public speaking, manajemen waktu, atau cara belajar UTBK?
+          DM aja ya 🌸
+        </p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+        <a class="btn outline" href="#" onclick="alert('Arahkan ke Instagram DM kamu')">DM Instagram</a>
+        <a class="btn outline" href="#" onclick="alert('Arahkan ke TikTok kamu')">DM TikTok</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-row">
+    <div>© 2026 BloomSpace • Dibuat oleh Kelompok 1</div>
+    <a class="pill" href="index.html">Kembali Home →</a>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+  function copyText(text){
+    navigator.clipboard.writeText(text)
+      .then(()=> alert("Disalin: " + text))
+      .catch(()=> alert("Gagal menyalin. Silakan salin manual: " + text));
+  }
+</script>
+</body>
+</html>
